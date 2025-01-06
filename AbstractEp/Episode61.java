@@ -1,18 +1,33 @@
 package AbstractEp;
 
-class Car {
-    public void drive(){
+abstract class Animal {
+    abstract void food();
 
-    }
-    public void playMusic(){
-        System.out.println("Play Music");
+    public void language() {
+        System.out.println("Can't talk");
     }
 }
 
-public class Episode61{
+class Rabbit extends Animal {
+    void food() {
+        System.out.println("Carrot");
+    }
+
+}
+
+class Frog extends Animal {
+    void food() {
+        System.out.println("Insects");
+    }
+}
+
+public class Episode61 {
     public static void main(String[] args) {
-        Car obj = new Car();
-        obj.drive();
-        obj.playMusic();
+        Rabbit obj = new Rabbit();
+        obj.food();
+        obj.language();
+        Frog obj1 = new Frog();
+        obj1.food();
+        obj1.language();
     }
 }
